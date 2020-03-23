@@ -21,9 +21,7 @@ const Layout = ({ children }) => (
       <>
         <GlobalStyle />
         <MainWrapper>
-          <Header siteTitle={data.site.siteMetadata.title} />
           <main>{children}</main>
-          <Footer />
         </MainWrapper>
       </>
     )}

@@ -7,12 +7,10 @@ import { Container } from "./layoutComponents"
 const Header = ({ siteTitle, className }) => (
   <header className={className}>
     <Container>
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+
     </Container>
   </header>
-)
+);
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

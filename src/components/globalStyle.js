@@ -3,14 +3,16 @@ import { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Karla|Lato');
   :root {
-    --primary-color: rebeccapurple;
+    --primary-color: #1D1D1D;
     --white: #FFFAFF;
   }
   * {
     box-sizing: border-box;
   }
   html {
-    font-family: lato;
+  background: #111111;
+    font-family: Helvetica;
+    color: #FFFAFF;;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     touch-action: manipulation;
@@ -22,16 +24,9 @@ export const GlobalStyle = createGlobalStyle`
   main {
     flex: 1 0 auto;
     h1,h2,h3,h4,h5,h6 {
-    font-family: Karla;
-    color: #0c2340;
+    font-family: Helvetica;
+    color: #FFFAFF;
     }
-    a {
-      color: #2A5DB0;
-    }
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
   }
   article,
   aside,
@@ -65,6 +60,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     background-color: transparent;
+    text-decoration: none;
     -webkit-text-decoration-skip: objects;
   }
   a:active,
@@ -223,8 +219,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    color: hsla(0, 0%, 0%, 0.8);
-    font-family: georgia, serif;
+    color: #FFFAFF;
+    font-family: Helvetica;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -254,7 +250,7 @@ export const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: Helvetica, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
@@ -409,6 +405,7 @@ export const GlobalStyle = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
+    line-height: 1.5;
   }
   figure {
     margin-left: 0;
@@ -498,17 +495,10 @@ export const GlobalStyle = createGlobalStyle`
     margin-bottom: 1.45rem;
   }
   hr {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    margin-bottom: calc(1.45rem - 1px);
-    background: hsla(0, 0%, 0%, 0.2);
-    border: none;
-    height: 1px;
+    display: block;
+    border: 3px solid #FF3939;
+    width: 100%;
+    margin: 1em auto;
   }
   address {
     margin-left: 0;
@@ -518,7 +508,7 @@ export const GlobalStyle = createGlobalStyle`
     padding-left: 0;
     padding-right: 0;
     padding-top: 0;
-    margin-bottom: 1.45rem;
+    margin-bottom: 1.45rem; {
   }
   b {
     font-weight: bold;

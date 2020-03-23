@@ -28,8 +28,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to falses
+        allExtensions: true, // defaults to false
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["HelveticaNow-Regular, HelveticaNow-Bold"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
 }
