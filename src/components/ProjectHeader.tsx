@@ -5,7 +5,7 @@ const ProjectHeader = styled.h1`
     font-size: 2em;
     color: #fff;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     text-transform: uppercase;
     transform: translateX(-100%) rotate(-90deg);
     transform-origin: right top;

@@ -12,7 +12,7 @@ const StyledPageHeader = styled.h1`
     text-align: ${props => props.align ? props.align: "center"};
     -webkit-text-stroke: 1px #fff;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     white-space: nowrap;
     position: relative;
     margin-top: 1em;
@@ -34,8 +34,8 @@ const StyledPageHeader = styled.h1`
 const PageHeader: React.FunctionComponent<Props> = ({ text, align }) => (
     <StyledPageHeader align={align}>
         <span className={"header"}>{text}</span>
-        {[1, 2, 3].map(index => (
-            <span style={{ top: `0.${3 * index}em`, zIndex: 3-index}}>
+        {[1, 2].map(index => (
+            <span style={{ top: `0.${3 * index}em`, zIndex: 3-index}} key={index}>
                 {text}
             </span>
         ))}

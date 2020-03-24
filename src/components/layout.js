@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import { GlobalStyle } from "./globalStyle"
 import { MainWrapper } from "./layoutComponents"
-import Header from "./header"
-import Footer from "./footer"
+import { Helmet } from "react-helmet";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -19,6 +18,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <Helmet>
+          <link rel="stylesheet" href="https://use.typekit.net/mye5mca.css" />
+        </Helmet>
         <GlobalStyle />
         <MainWrapper>
           <main>{children}</main>

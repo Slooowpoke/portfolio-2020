@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Karla|Lato');
   :root {
     --primary-color: #1D1D1D;
     --white: #FFFAFF;
@@ -10,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   html {
-  background: #111111;
-    font-family: Helvetica;
+    background: #111111;
+    font-family: neue-haas-grotesk-display, sans-serif;
     color: #FFFAFF;;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -22,10 +21,11 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
   main {
+    overflow-x: hidden;
     flex: 1 0 auto;
     h1,h2,h3,h4,h5,h6 {
-    font-family: Helvetica;
-    color: #FFFAFF;
+      font-family: neue-haas-grotesk-display, sans-serif;
+      color: #FFFAFF;
     }
   }
   article,
@@ -220,7 +220,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     color: #FFFAFF;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -250,8 +250,7 @@ export const GlobalStyle = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: Helvetica, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: neue-haas-grotesk-display, sans-serif;
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;

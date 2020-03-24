@@ -7,10 +7,10 @@ type Props = {
     to: string,
 };
 
-const StyledBlogLink = styled.a`
+const StyledBlogLink = styled.span`
     color: #fff;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     color: #FBFF39;
     text-decoration: underline;
     margin: 0.8em auto;

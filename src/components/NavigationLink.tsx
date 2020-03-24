@@ -16,11 +16,12 @@ const StyledNavigationLink = styled.div`
     color: transparent;
     width: auto;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     margin: ${props => props.marginY ? props.marginY : "1em"} auto;
     transition: 0.2s ease all;
     cursor: pointer;
     position: relative;
+    line-height: 1.5;
     &:hover{
         color: #fff;
         &:before{

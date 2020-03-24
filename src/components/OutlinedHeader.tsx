@@ -8,7 +8,7 @@ const OutlinedHeader = styled.h3`
     color: transparent;
     width: auto;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: neue-haas-grotesk-display, sans-serif;
     margin: ${props => props.marginY ? props.marginY : "1em"} auto;
     transition: 0.2s ease all;
 `;
