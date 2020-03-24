@@ -34,6 +34,7 @@ module.exports = {
         isTSX: true, // defaults to falses
         allExtensions: true, // defaults to false
       },
-    }
+    },
+    `gatsby-plugin-transition-link`
   ],
-}
+};

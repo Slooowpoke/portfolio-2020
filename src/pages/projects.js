@@ -4,6 +4,7 @@ import { Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader";
 import NavigationLink from "../components/NavigationLink";
+import TransitionAnimation from "../components/TransitionAnimation";
 
 const Projects = () => (
     <Layout>
@@ -13,6 +14,7 @@ const Projects = () => (
             <NavigationLink to={"/projects/beardinator"} align={"left"}>
                 {"BEARDINATOR"}
             </NavigationLink>
+            <TransitionAnimation />
         </Container>
     </Layout>
 );
