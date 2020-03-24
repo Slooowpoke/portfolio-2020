@@ -34,15 +34,6 @@ module.exports = {
         isTSX: true, // defaults to falses
         allExtensions: true, // defaults to false
       },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        custom: {
-          families: ["HelveticaNow-Regular, HelveticaNow-Bold"],
-          urls: ["/fonts/fonts.css"],
-        },
-      },
-    },
+    }
   ],
 }

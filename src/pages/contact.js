@@ -3,11 +3,8 @@ import Layout from "../components/layout"
 import { Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader";
-import NavigationLink from "../components/NavigationLink";
-import Subtitle from "../components/Subtitle";
 import BlogSnippetText from "../components/BlogSnippetText";
 import BlogLink from "../components/BlogLink";
-import BlogSnippet from "../components/BlogSnippet";
 import OutlinedHeader from "../components/OutlinedHeader";
 
 const Blog = () => (

@@ -2,12 +2,8 @@ import React from "react"
 import Layout from "../../components/layout"
 import { Container } from "../../components/layoutComponents"
 import SEO from "../../components/seo"
-import PageHeader from "../../components/PageHeader";
-import NavigationLink from "../../components/NavigationLink";
-import Subtitle from "../../components/Subtitle";
 import BlogSnippetText from "../../components/BlogSnippetText";
 import BlogLink from "../../components/BlogLink";
-import BlogSnippet from "../../components/BlogSnippet";
 import OutlinedHeader from "../../components/OutlinedHeader";
 import ProjectHeader from "../../components/ProjectHeader";
 import ProjectDetails from "../../components/ProjectDetails";
@@ -17,10 +13,13 @@ const Beardinator = () => (
     <Layout>
         <Container>
             <SEO title="Beardinator"/>
-            <ProjectHeader>
-                {"Beardinator"}
-            </ProjectHeader>
-            <ProjectDetails>
+            <div>
+              <ProjectHeader>
+                {"Sleepy Studios Website"}
+              </ProjectHeader>
+            </div>
+
+            <ProjectDetails thumb={"/projects/beardinator/thumb.png"} images={["/projects/beardinator/desktop.png", "/projects/beardinator/desktop.png", "/projects/beardinator/desktop.png"]}>
                 <OutlinedHeader align={"right"}>
                     {"PHP AND JAVASCRIPT"}
                 </OutlinedHeader>
