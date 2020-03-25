@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { Link } from "gatsby";
+import Link from "gatsby-plugin-transition-link/AniLink";
 
 type Props = {
     children: React.ReactNode,
@@ -58,7 +58,10 @@ const StyledNavigationLink = styled.div`
 `;
 
 const NavigationLink: React.FunctionComponent<Props> = ({ children, to, align = "center",  marginY }) => (
-    <Link to={to}>
+    <Link to={to}
+          cover
+          bg="#FF3939"
+          duration={0.8}>
         <StyledNavigationLink align={align} marginY={marginY}>
             {children}
         </StyledNavigationLink>

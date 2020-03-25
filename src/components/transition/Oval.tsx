@@ -11,6 +11,7 @@ const StyledOval = styled.div`
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
+    background: #121212;
 `;
 
 export default StyledOval;

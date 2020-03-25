@@ -1,7 +1,8 @@
-import React, {useEffect, useRef} from "react";
+import * as React from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3, Back } from "gsap";
 import Oval from "./transition/Oval";
+import {useEffect, useRef} from "react";
 
 const StyledTransitionAnimation = styled.div`
     position: fixed;
@@ -12,28 +13,28 @@ const StyledTransitionAnimation = styled.div`
     .backdrop {
         width: 100%;
         height: 100vh;
-        opacity: 0;
-        background: #1D1D1D;
+        background: #121212;
     }
     .circle {
-        opacity: 0;
+        background: #121212;
         border-radius: 100%;
         border: 2px solid #fff;
         position: fixed;
         z-index: 21;
         top: 30%;
         left: 50%;
+        opacity: 1;
         transform: translate(-50%, -50%);
     }
 `;
 
-const TransitionAnimation = () => {
+const TransitionAnimation = ({ transitionStatus }) => {
     let backdropRef = useRef(null), circleRef = useRef(null);
 
     const ovals = [];
     let initialOvalWidth = 30, initialOvalHeight = 90;
     let totalOvalSizeIncrement = 30;
-    let totalOvals = 5;
+    let totalOvals = 4;
     for(let index = 0 ; index < totalOvals; index++){
         ovals.push({
             initialWidth: initialOvalWidth + (totalOvalSizeIncrement * index),
@@ -45,18 +46,25 @@ const TransitionAnimation = () => {
     let timeline = new TimelineLite();
 
     useEffect(() => {
-        timeline
-            .to(backdropRef, 0.2, { opacity: 1,  ease: Power3.easeIn})
-            .to(circleRef, 0.2, { opacity: 1, width: "40px", height: "40px",  ease: Back.easeInOut});
-        for(let oval of ovals){
-            timeline.to(oval.ref, 0.1, { opacity: 1, ease: Power3.easeIn})
+        console.log(transitionStatus);
+        if (transitionStatus === "entered" || transitionStatus === "entering"){
+            timeline
+                .to(circleRef, 0.8, { width: "40px", height: "40px",  ease: Back.easeInOut})
+                .to(circleRef, 0.8, { opacity: 0, width: "0", height: "0",  ease: Back.easeInOut})
+                .to(backdropRef, 0.5, { opacity: 0,  ease: Power3.easeIn});
         }
-        ovals.map((oval, index) => {
-            timeline.to(oval.ref, 1, { width: `${120 + (20 * index)}vw`, opacity: 0, ease: Power3.easeIn})
-        });
-        timeline
-            .to(circleRef, 0.1, { opacity: 0, width: "0", height: "0",  ease: Back.easeInOut})
-            .to(backdropRef, 0.2, { opacity: 0,  ease: Power3.easeIn})
+
+        //
+        // ovals.map((oval, index) => {
+        //     timeline.to(oval.ref, 0.1, { opacity: 1, ease: Back.easeIn})
+        // });
+        // ovals.map((oval, index) => {
+        //     timeline.to(oval.ref, 0.1, { opacity: 0, ease: Back.easeIn})
+        // });
+
+        // timeline
+        //     .to(circleRef, 0.2, { opacity: 0, width: "0", height: "0",  ease: Back.easeInOut})
+        //     .to(backdropRef, 0.2, { opacity: 0,  ease: Power3.easeIn})
     });
 
     return (
@@ -64,7 +72,11 @@ const TransitionAnimation = () => {
             <div className={"backdrop"} ref={el => backdropRef = el}/>
             <div className={"circle"} ref={el => circleRef = el}/>
             {ovals.map((oval, index) => (
-                <Oval initialWidth={oval.initialWidth} initialHeight={oval.initialHeight} ref={el => oval.ref = el}/>
+                <Oval style={{zIndex: ovals.length - index}}
+                      initialWidth={oval.initialWidth}
+                      initialHeight={oval.initialHeight}
+                      ref={el => oval.ref = el}
+                />
             ))}
 
             {/*<Oval initialWidth="50vw" initialHeight={"120vh"}/>*/}
