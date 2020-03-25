@@ -20,6 +20,7 @@ const StyledBlogLink = styled.span`
     background-image: linear-gradient(to left, #fff 50%, black 0);
     background-position: left;
     display: inline-block;
+    padding: 0 2px;
     &:hover{
         color: #111111;
         background-position: right;
