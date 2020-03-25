@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader";
 import NavigationLink from "../components/NavigationLink";
 import styled from "styled-components";
+import FadeInOnLoad from "../components/FadeInOnLoad/FadeInOnLoad";
 
 const ProjectLink = styled(NavigationLink)`
     margin:0 auto;
@@ -29,18 +30,20 @@ const Projects = ({ children, transitionStatus, entry, exit }) => (
         <Container>
             <SEO title="Projects" />
             <PageHeader text={"Projects"} align={"left"}/>
-            <ProjectLink to={"/projects/beardinator"} align={"left"}>
-                {"BEARDINATOR"}
-                <img src={"/projects/beardinator/desktop.png"} />
-            </ProjectLink>
-            <ProjectLink to={"/projects/beardinator"} align={"left"}>
-                {"SLEEPY STUDIOS WEBSITE"}
-                <img src={"/projects/beardinator/desktop.png"} />
-            </ProjectLink>
-            <ProjectLink to={"/projects/beardinator"} align={"left"}>
-                {"JEALOUS RECTANGLE"}
-                <img src={"/projects/beardinator/desktop.png"} />
-            </ProjectLink>
+            <FadeInOnLoad>
+                <ProjectLink to={"/projects/beardinator"} align={"left"}>
+                    {"BEARDINATOR"}
+                    <img src={"/projects/beardinator/desktop.png"} />
+                </ProjectLink>
+                <ProjectLink to={"/projects/beardinator"} align={"left"}>
+                    {"SLEEPY STUDIOS WEBSITE"}
+                    <img src={"/projects/beardinator/desktop.png"} />
+                </ProjectLink>
+                <ProjectLink to={"/projects/beardinator"} align={"left"}>
+                    {"JEALOUS RECTANGLE"}
+                    <img src={"/projects/beardinator/desktop.png"} />
+                </ProjectLink>
+            </FadeInOnLoad>
         </Container>
     </Layout>
 );

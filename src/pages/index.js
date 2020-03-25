@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader"
 import TracedHeart from "../components/TracedHeart";
 import NavigationLink from "../components/NavigationLink";
+import FadeInOnLoad from "../components/FadeInOnLoad/FadeInOnLoad";
 
 const IndexPage = () => (
   <Layout>
@@ -13,20 +14,22 @@ const IndexPage = () => (
       <TracedHeart />
       <NavigationContainer>
         <PageHeader text={"Mali Coxon"} />
-        <NavigationLink to={"/projects"}>
-          {"PROJECTS"}
-        </NavigationLink>
-        <NavigationLink to={"/blog"}>
-          {"BLOG"}
-        </NavigationLink>
-        <NavigationLink to={"/contact"}>
-          {"CONTACT"}
-        </NavigationLink>
-        <hr />
-        <p>
-          I have a love of web development, reading, funky shirts and yum yums.
-        </p>
-        <hr />
+        <FadeInOnLoad>
+          <NavigationLink to={"/projects"}>
+            {"PROJECTS"}
+          </NavigationLink>
+          <NavigationLink to={"/blog"}>
+            {"BLOG"}
+          </NavigationLink>
+          <NavigationLink to={"/contact"}>
+            {"CONTACT"}
+          </NavigationLink>
+          <hr />
+          <p>
+            I have a love of web development, reading, funky shirts and yum yums.
+          </p>
+          <hr />
+        </FadeInOnLoad>
       </NavigationContainer>
     </Container>
   </Layout>

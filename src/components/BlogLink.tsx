@@ -17,7 +17,7 @@ const StyledBlogLink = styled.span`
     transition: 0.2s ease all;
     background-size: 200% 200%;
     transition: background-position 0.2 ease;
-    background-image: linear-gradient(to left, #fff 50%, black 0);
+    background-image: linear-gradient(to left, #fff 50%, transparent 0);
     background-position: left;
     display: inline-block;
     padding: 0 2px;

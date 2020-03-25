@@ -4,15 +4,18 @@ import { Container } from "../components/layoutComponents"
 import SEO from "../components/seo"
 import PageHeader from "../components/PageHeader";
 import BlogSnippet from "../components/BlogSnippet";
+import FadeInOnLoad from "../components/FadeInOnLoad/FadeInOnLoad";
 
 const Blog = () => (
     <Layout>
         <Container>
             <SEO title="Blog"/>
             <PageHeader text={"Blog"} align={"left"}/>
-            <BlogSnippet />
-            <BlogSnippet />
-            <BlogSnippet />
+            <FadeInOnLoad>
+                <BlogSnippet />
+                <BlogSnippet />
+                <BlogSnippet />
+            </FadeInOnLoad>
         </Container>
     </Layout>
 );
