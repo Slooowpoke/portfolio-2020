@@ -7,7 +7,7 @@ import BlogSnippetText from "../components/BlogSnippetText";
 import BlogLink from "../components/BlogLink";
 import OutlinedHeader from "../components/OutlinedHeader";
 
-const Blog = () => (
+const Contact = () => (
     <Layout>
         <Container>
             <SEO title="Contact"/>
@@ -31,4 +31,4 @@ const Blog = () => (
     </Layout>
 );
 
-export default Blog;
+export default Contact;

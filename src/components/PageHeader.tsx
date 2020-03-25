@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import {useRef} from "react";
 
 type Props = {
     text: string,
@@ -31,15 +32,20 @@ const StyledPageHeader = styled.h1`
     }
 `;
 
-const PageHeader: React.FunctionComponent<Props> = ({ text, align }) => (
-    <StyledPageHeader align={align}>
-        <span className={"header"}>{text}</span>
-        {[1, 2].map(index => (
-            <span style={{ top: `0.${3 * index}em`, zIndex: 3-index}} key={index}>
+const PageHeader: React.FunctionComponent<Props> = ({ text, align }) => {
+    let firstShadow = useRef(null), secondShadow = useRef(null);
+
+    return (
+        <StyledPageHeader align={align}>
+            <span className={"header"}>{text}</span>
+            <span style={{ top: `0.3em`, zIndex: 3}} ref={el => firstShadow = el}>
                 {text}
             </span>
-        ))}
-    </StyledPageHeader>
-);
+            <span style={{ top: `0.6em`, zIndex: 2}} ref={el => secondShadow = el}>
+                {text}
+            </span>
+        </StyledPageHeader>
+    )
+};
 
 export default PageHeader
