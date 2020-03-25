@@ -6,7 +6,8 @@ type Props = {
     children: React.ReactNode,
     to: string,
     align?: string,
-    marginY?: string
+    marginY?: string,
+    className?: string
 };
 
 const StyledNavigationLink = styled.div`
@@ -57,12 +58,19 @@ const StyledNavigationLink = styled.div`
     }
 `;
 
-const NavigationLink: React.FunctionComponent<Props> = ({ children, to, align = "center",  marginY }) => (
+const NavigationLink: React.FunctionComponent<Props>
+    = ({
+           children,
+           to,
+           align = "center",
+           marginY,
+           className = ""
+    }) => (
     <Link to={to}
           cover
           bg="#FF3939"
           duration={0.8}>
-        <StyledNavigationLink align={align} marginY={marginY}>
+        <StyledNavigationLink align={align} marginY={marginY} className={className}>
             {children}
         </StyledNavigationLink>
     </Link>
