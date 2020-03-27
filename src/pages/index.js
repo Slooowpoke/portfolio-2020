@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
-import { Container, NavigationContainer } from "../components/layoutComponents"
-import SEO from "../components/seo"
-import PageHeader from "../components/PageHeader"
-import TracedHeart from "../components/TracedHeart";
-import NavigationLink from "../components/NavigationLink";
+import { Container, NavigationContainer } from "../components/Layout/LayoutComponents"
 import FadeInOnLoad from "../components/FadeInOnLoad/FadeInOnLoad";
+import PageHeader from "../components/PageHeader/PageHeader";
+import TracedHeart from "../components/TracedHeart/TracedHeart";
+import Layout from "../components/Layout";
+import NavigationLink from "../components/NavigationLink/NavigationLink";
+import { SEO } from "../components/SEO/SEO";
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +15,7 @@ const IndexPage = () => (
       <NavigationContainer>
         <PageHeader text={"Mali Coxon"} />
         <FadeInOnLoad>
-          <NavigationLink to={"/projects"}>
+          <NavigationLink to={"/portfolio"}>
             {"PROJECTS"}
           </NavigationLink>
           <NavigationLink to={"/blog"}>
