@@ -6,19 +6,26 @@
   "author": "Blake Noll <nollblake@gmail.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "babel-preset-gatsby": "^0.3.1",
     "gatsby": "^2.19.12",
     "gatsby-image": "^2.2.30",
     "gatsby-plugin-manifest": "^2.1.1",
     "gatsby-plugin-offline": "^3.0.18",
     "gatsby-plugin-react-helmet": "^3.1.2",
-    "gatsby-plugin-sharp": "^2.2.8",
+    "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-styled-components": "^3.1.11",
     "gatsby-plugin-transition-link": "^1.18.0",
     "gatsby-plugin-typescript": "^2.3.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-copy-linked-files": "^2.2.1",
+    "gatsby-remark-embed-video": "^2.0.1",
+    "gatsby-remark-images": "^3.2.1",
+    "gatsby-remark-responsive-iframe": "^2.3.1",
     "gatsby-source-filesystem": "^2.1.9",
-    "gatsby-transformer-sharp": "^2.2.23",
+    "gatsby-transformer-remark": "^2.7.1",
+    "gatsby-transformer-sharp": "^2.4.2",
     "gsap": "^3.2.6",
+    "identity-obj-proxy": "^3.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -26,6 +33,13 @@
     "styled-components": "^4.4.0"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/jest-dom": "^5.2.0",
+    "@testing-library/react": "^10.0.1",
+    "@types/jest-axe": "^3.2.1",
+    "babel-jest": "^25.1.0",
+    "jest": "^25.1.0",
+    "jest-axe": "^3.4.0",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -38,7 +52,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "jest"
   },
   "repository": {
     "type": "git",
