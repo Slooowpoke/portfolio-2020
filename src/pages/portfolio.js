@@ -19,6 +19,7 @@ const Portfolio = ({ data }) => {
                 <FadeInOnLoad>
                     {projects.map((project, index) => 
                         <PortfolioListLink
+                            key={index}
                             title={project.title}
                             projectDesktopImage={project.desktopImage}
                             to={project.path}
