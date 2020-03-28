@@ -5,7 +5,7 @@ import projectImages from "../../../__mocks__/projectImages";
 import { PortfolioListLink } from "./PortfolioListLink";
 import InternalProvider from "gatsby-plugin-transition-link/context/InternalProvider";
 
-describe('Given a PageHeader component', () => {
+describe('Given a PortfolioListLink component', () => {
     describe('when it is rendered', () => {
         test('it should render correctly with no a11y violations', async () => {
             const { container } = render(

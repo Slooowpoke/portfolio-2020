@@ -26,8 +26,8 @@ const BlogSnippet: FunctionComponent<BlogSnippetProps> = ({
             <Link to={to}>
                 {"READ MORE"}
             </Link>
+            <hr />
         </StyledBlogSnippet>
-        <hr />
     </>
 );
 
