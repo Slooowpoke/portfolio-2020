@@ -1,11 +1,4 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
-import {globalHistory} from '@reach/router';
+import {globalHistory} from "@reach/router";
 export const onInitialClientRender = () => {
     /**
      * This is a workaround for a bug in Gatsby
