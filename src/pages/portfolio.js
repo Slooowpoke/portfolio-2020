@@ -47,7 +47,7 @@ export const projectsQuery = graphql`
                         title
                         desktopImage {
                             childImageSharp {
-                                fixed(width: 820, height: 629) {
+                                fixed(width: 820) {
                                     ...GatsbyImageSharpFixed_withWebp_tracedSVG
                                 }
                             }
