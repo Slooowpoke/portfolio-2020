@@ -2,5 +2,8 @@ import styled from "styled-components";
 
 export const StyledBlogSnippet = styled.article`
     margin: 4em 0;
-    max-width: 620px;
+    p {
+        max-width: 620px;
+        margin-left: 0;
+    }
 `;

@@ -8,9 +8,10 @@ import { StyledPageHeader } from "./PageHeader.styles";
 const PageHeader: React.FunctionComponent<PageHeaderProps> = ({ text, align }) => {
     let pageHeaderRef = useRef(null);
     let firstOutlineRef = useRef(null), secondOutlineRef = useRef(null);
-    let timeline = new TimelineLite();
 
     useEffect(() => {
+        let timeline = new TimelineLite();
+
         timeline
             .to(pageHeaderRef.current, 0.8, { opacity: 1, top: 0, ease: Power3.easeInOut}, "first-anim")
             .to(firstOutlineRef.current, 1.0, { opacity: 1,  ease: Power3.easeInOut}, "first-anim")
