@@ -47,7 +47,7 @@ export const pageQuery = graphql`
                 tools
                 desktopImage {
                     childImageSharp {
-                        fixed(width: 820, height: 629) {
+                        fixed(width: 720) {
                             ...GatsbyImageSharpFixed_withWebp_tracedSVG
                         }
                     }
