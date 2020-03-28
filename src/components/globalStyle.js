@@ -83,6 +83,9 @@ export const GlobalStyle = createGlobalStyle`
         background-position: right;
     }
   }
+  a:visited {
+    color: #FBFF39;
+  }
   a:active,
   a:hover {
     outline-width: 0;

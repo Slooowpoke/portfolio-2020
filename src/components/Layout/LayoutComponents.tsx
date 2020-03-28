@@ -4,7 +4,6 @@ export const MainWrapper = styled.div`
   margin: 0;
   display: flex;
   flex-direction: column;
-  margin-top: 2em;
   position: relative;
 `;
 
@@ -18,6 +17,12 @@ export const Container = styled.div`
 export const NavigationContainer = styled.div`
   margin: 0 auto;
   max-width: 308px;
+`;
+
+export const NavBar = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
 `;
 
 export const Row = styled.div`

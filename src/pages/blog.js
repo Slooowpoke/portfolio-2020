@@ -1,11 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Container } from "../components/Layout/LayoutComponents"
+import { Container, NavBar } from "../components/Layout/LayoutComponents"
 import FadeInOnLoad from "../components/FadeInOnLoad/FadeInOnLoad";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { SEO } from "../components/SEO/SEO";
 import BlogSnippet from "../components/BlogSnippet/BlogSnippet";
 import { graphql } from "gatsby";
+import Link from "../components/Link/Link";
 
 const Blog = ({ data }) => {
     const { allMarkdownRemark } = data;
@@ -15,6 +16,11 @@ const Blog = ({ data }) => {
         <Layout>
             <Container>
                 <SEO title="Blog"/>
+                <NavBar>
+                    <Link to={"/"}>
+                        {"HOME"}
+                    </Link>
+                </NavBar>
                 <PageHeader text={"Blog"} align={"left"}/>
                 <FadeInOnLoad>
                     {posts.map((post, index) =>
