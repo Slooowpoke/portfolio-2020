@@ -1,9 +1,10 @@
 import React from "react"
-import { Container } from "../components/Layout/LayoutComponents"
+import { Container, NavBar } from "../components/Layout/LayoutComponents"
 import { SEO } from "../components/SEO/SEO";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { BlogArticle } from "../components/BlogArticle/BlogArticle";
 import Layout from "../components/Layout";
+import Link from "../components/Link/Link";
 
 const Post = ({ data }) => {
     const { markdownRemark } = data;
@@ -14,6 +15,14 @@ const Post = ({ data }) => {
         <Layout>
             <Container>
                 <SEO title={title} />
+                <NavBar>
+                    <Link to={"/"}>
+                        {"HOME"}
+                    </Link>
+                    <Link to={"/blog"}>
+                        {"BACK"}
+                    </Link>
+                </NavBar>
                 <PageHeader text={title} align={"left"}/>
                 <BlogArticle date={date} html={html} />
             </Container>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Container } from "../components/Layout/LayoutComponents"
+import { Container, NavBar } from "../components/Layout/LayoutComponents"
 import SnippetText from "../components/Layout/SnippetText";
 import Link from "../components/Link/Link";
 import OutlinedHeader from "../components/Layout/OutlinedHeader";
@@ -12,6 +12,11 @@ const Contact = () => (
     <Layout>
         <Container>
             <SEO title="Contact"/>
+            <NavBar>
+                <Link to={"/"}>
+                    {"HOME"}
+                </Link>
+            </NavBar>
             <PageHeader text={"Contact"} align={"left"}/>
             <FadeInOnLoad>
                 <OutlinedHeader align={"left"}>

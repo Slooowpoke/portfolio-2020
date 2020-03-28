@@ -1,9 +1,10 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { Container } from "../components/Layout/LayoutComponents"
+import { Container, NavBar } from "../components/Layout/LayoutComponents"
 import { SEO } from "../components/SEO/SEO";
 import ProjectPageDetails from "../components/ProjectPageDetails/ProjectPageDetails";
 import { graphql } from "gatsby";
+import Link from "../components/Link/Link";
 
 const Project = ({ data }) => {
     const { markdownRemark } = data;
@@ -14,6 +15,14 @@ const Project = ({ data }) => {
         <Layout>
             <Container>
                 <SEO title={title} />
+                <NavBar>
+                    <Link to={"/"}>
+                        {"HOME"}
+                    </Link>
+                    <Link to={"/portfolio"}>
+                        {"BACK"}
+                    </Link>
+                </NavBar>
                 <ProjectPageDetails
                     html={html}
                     title={title}
