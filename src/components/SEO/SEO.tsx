@@ -28,13 +28,14 @@ export const SEO: FunctionComponent<SEOProps> = ({
                 const metaDescription =
                     description || data.site.siteMetadata.description;
                 const author = data.site.siteMetadata.author;
+                const pageTitle = data.site.siteMetadata.title;
                 return (
                     <Helmet
                         htmlAttributes={{
                             lang,
                         }}
                         title={title}
-                        titleTemplate={`%s | ${title}`}
+                        titleTemplate={`${title} | ${pageTitle}`}
                         meta={[
                             {
                                 name: `description`,

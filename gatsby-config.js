@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Portfolio 2020`,
-    description: `Gatsby starter using styled-components`,
+    title: `Mali Coxon`,
+    description: `Mali Coxon - Programmer`,
     author: `@slooowpoke`,
   },
   plugins: [
