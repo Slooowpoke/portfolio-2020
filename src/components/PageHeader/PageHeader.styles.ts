@@ -8,7 +8,7 @@ export const StyledPageHeader = styled.h1`
     -webkit-text-stroke: 1px #fff;
     font-weight: bold;
     font-family: neue-haas-grotesk-display, sans-serif;
-    white-space: nowrap;
+    line-height: 1.9;
     position: relative;
     margin-top: 1em;
     margin-bottom: 2em;
