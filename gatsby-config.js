@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter w/ styled-components`,
+    title: `Portfolio 2020`,
     description: `Gatsby starter using styled-components`,
-    author: `@blakenoll`,
+    author: `@slooowpoke`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -79,8 +79,8 @@ module.exports = {
           {
             resolve: "gatsby-remark-embed-video",
             options: {
-              related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-              noIframeBorder: true //Optional: Disable insertion of <style> border: 0
+              related: false,
+              noIframeBorder: true
             }
           },
           `gatsby-remark-copy-linked-files`,
