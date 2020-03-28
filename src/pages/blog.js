@@ -10,7 +10,6 @@ import { graphql } from "gatsby";
 const Blog = ({ data }) => {
     const { allMarkdownRemark } = data;
     const posts = allMarkdownRemark.edges.map(edge => edge.node);
-    console.log(data);
 
     return (
         <Layout>
@@ -20,6 +19,7 @@ const Blog = ({ data }) => {
                 <FadeInOnLoad>
                     {posts.map((post, index) =>
                         <BlogSnippet
+                            key={index}
                             title={post.frontmatter.title}
                             date={post.frontmatter.date}
                             excerpt={post.excerpt}
