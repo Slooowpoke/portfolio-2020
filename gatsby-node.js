@@ -22,6 +22,7 @@ exports.createPages = async ({ actions, graphql }) => {
         }
     }`).then(result => {
         if (result.errors) {
+            console.error(result.errors);
             return Promise.reject(result.errors);
         }
 
@@ -52,7 +53,8 @@ exports.createPages = async ({ actions, graphql }) => {
         }
     }`).then(result => {
         if (result.errors) {
-            return Promise.reject(result.errors);
+            console.log(result);
+            throw result.errors;
         }
 
         return result.data.allMarkdownRemark.edges.forEach(({ node }) =>
@@ -61,5 +63,7 @@ exports.createPages = async ({ actions, graphql }) => {
                 component: postsTemplate,
             })
         );
-    });
+    }).catch((error) => {
+        console.error(error);
+    })
 };
