@@ -1,19 +1,14 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { Container } from "../components/Layout/LayoutComponents"
 import { SEO } from "../components/SEO/SEO";
 import PageHeader from "../components/PageHeader/PageHeader";
 import { BlogArticle } from "../components/BlogArticle/BlogArticle";
+import Layout from "../components/Layout";
 
 const Post = ({ data }) => {
     const { markdownRemark } = data;
     const { html, frontmatter } = markdownRemark;
-    const { date } = frontmatter;
-
-    const post = {
-        html,
-        date
-    };
+    const { date, title } = frontmatter;
 
     return (
         <Layout>
