@@ -63,6 +63,26 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     -webkit-text-decoration-skip: objects;
   }
+  p a {
+    color: #fff;
+    text-transform:uppercase;
+    font-weight: bold;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    color: #FBFF39;
+    text-decoration: underline;
+    margin: 0.8em auto;
+    transition: 0.2s ease all;
+    background-size: 200% 200%;
+    transition: background-position 0.2 ease;
+    background-image: linear-gradient(to left, #fff 50%, transparent 0);
+    background-position: left;
+    display: inline-block;
+    padding: 0 2px;
+    &:hover{
+        color: #111111;
+        background-position: right;
+    }
+  }
   a:active,
   a:hover {
     outline-width: 0;
@@ -404,7 +424,8 @@ export const GlobalStyle = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    line-height: 1.5;
+    line-height: 1.8;
+    letter-spacing: 1.2px;
   }
   figure {
     margin-left: 0;

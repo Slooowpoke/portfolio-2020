@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const StyledLink = styled.span`
-    color: #fff;
     font-weight: bold;
     font-family: neue-haas-grotesk-display, sans-serif;
-    color: #FBFF39;
     text-decoration: underline;
     margin: 0.8em auto;
     transition: 0.2s ease all;
