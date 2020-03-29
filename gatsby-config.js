@@ -3,6 +3,7 @@ module.exports = {
         title: `Mali Coxon`,
         description: `Mali Coxon - Programmer`,
         author: `@slooowpoke`,
+        siteUrl: "https://malicoxon.co.uk"
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -87,6 +88,8 @@ module.exports = {
                     `gatsby-remark-responsive-iframe`
                 ],
             },
-        }
+        },
+        `gatsby-plugin-robots-txt`,
+        `gatsby-plugin-sitemap`
     ],
 };
