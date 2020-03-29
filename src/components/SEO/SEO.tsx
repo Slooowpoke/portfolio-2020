@@ -5,7 +5,7 @@ import { SEOProps } from "./SEO.models";
 
 export const SEO: FunctionComponent<SEOProps> = ({
     description,
-    lang,
+    lang= "en",
     meta,
     keywords= [],
     title
