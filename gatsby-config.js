@@ -90,6 +90,14 @@ module.exports = {
             },
         },
         `gatsby-plugin-robots-txt`,
-        `gatsby-plugin-sitemap`
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: 'gatsby-plugin-web-font-loader',
+            options: {
+                typekit: {
+                    id: 'mye5mca'
+                }
+            }
+        }
     ],
 };

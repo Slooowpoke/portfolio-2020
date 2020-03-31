@@ -18,9 +18,6 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet>
-          <link rel="stylesheet" href="https://use.typekit.net/mye5mca.css" />
-        </Helmet>
         <GlobalStyle />
         <MainWrapper>
           <main>{children}</main>
