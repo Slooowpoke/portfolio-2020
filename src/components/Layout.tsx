@@ -18,6 +18,10 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+          <Helmet>
+              <link rel="dns-prefetch" href="https://use.typekit.net" />
+              <link rel="preconnect" href="https://use.typekit.net" />
+          </Helmet>
         <GlobalStyle />
         <MainWrapper>
           <main>{children}</main>
