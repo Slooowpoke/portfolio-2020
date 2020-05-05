@@ -41,7 +41,7 @@
     "@testing-library/jest-dom": "^5.2.0",
     "@testing-library/react": "^10.0.1",
     "@types/jest-axe": "^3.2.1",
-    "babel-jest": "^25.1.0",
+    "babel-jest": "^26.0.0",
     "jest": "^25.1.0",
     "jest-axe": "^3.4.0",
     "prettier": "^1.18.2"
