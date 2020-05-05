@@ -23,16 +23,13 @@ const Contact = () => (
                     {"I don't bite."}<sup>{"(much)"}</sup>
                 </OutlinedHeader>
                 <SnippetText>
-                    {"You can find me on Twitter "}<Link to={"https://twitter.com"}>{"here."}</Link>
-                </SnippetText>
-                <SnippetText>
-                    {"You can find me on LinkedIn "}<Link to={"https://twitter.com"}>{"here."}</Link>
-                </SnippetText>
-                <SnippetText>
-                    {"You can find me on GitHub "}<Link to={"https://twitter.com"}>{"here."}</Link>
-                </SnippetText>
-                <SnippetText>
-                    {"You can drop me an email at "}<Link to={"mail@malicoxon.co.uk"}>{"mail@malicoxon.co.uk"}</Link>
+                    {"You can find me on Twitter "}<a style={{textTransform: 'none'}} href={"https://twitter.com/slooowpoke"}>{"here."}</a>
+                    <br />
+                    {"You can find me on LinkedIn "}<a style={{textTransform: 'none'}} href={"https://www.linkedin.com/in/mali-coxon/"}>{"here."}</a>
+                    <br />
+                    {"You can find me on GitHub "}<a style={{textTransform: 'none'}} href={"https://github.com/slooowpoke/"}>{"here."}</a>
+                    <br />
+                    {"You can drop me an email at "}<a style={{textTransform: 'none'}} href={"mailto: mail@malicoxon.co.uk"}>{"mail@malicoxon.co.uk"}</a>
                 </SnippetText>
             </FadeInOnLoad>
         </Container>

@@ -65,7 +65,6 @@ export const GlobalStyle = createGlobalStyle`
   }
   p a {
     color: #fff;
-    text-transform:uppercase;
     font-weight: bold;
     font-family: neue-haas-grotesk-display, sans-serif;
     color: #FBFF39;
